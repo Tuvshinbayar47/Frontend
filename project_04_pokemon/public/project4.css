@@ -1,0 +1,314 @@
+body {
+    width: 1512px;
+    background: var(--Light---Gray, #F5F7FB);
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+/* Logo  */
+.logo {
+    margin: 50px;
+}
+
+
+/* Search */
+.Search {
+    width: 112%;
+    margin: 50px;
+    position: relative;
+}
+
+.Search input {
+    color: red;
+    padding-left: 50px;
+    width: 80%;
+    height: 56px;
+    border-radius: 16px;
+    border: none;
+}
+
+.Search-btn {
+    background-color: #FFCE31;
+    color: blue;
+    border-radius: 8px;
+    width: 151px;
+    height: 40px;
+    position: absolute;
+    right: 300px;
+    top: 10px;
+    border: none;
+}
+
+#glass {
+    width: 19.999px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    top: 18px;
+}
+
+
+.Filter{
+    margin: 0 30px 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.Filter button{
+    padding: 5px 15px;
+    border-radius: 16px;
+}
+/* -------------Drop down menu------------------ */
+.dropDownBtn {
+    background-color: #d5d8dd;
+    color: black;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.drop-down a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.drop-down .dropDown-Menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(212, 212, 212);
+    min-width: 160px;
+    box-shadow: 2px 2px 5px darkgrey;
+    z-index: 2;
+}
+
+.drop-down:hover .dropDown-Menu {
+    display: block;
+}
+
+.drop-down:hover button {
+    background-color: rgb(212, 212, 212);
+}
+
+.drop-down a:hover {
+    background-color: #F5F7FB;
+}
+
+/* -------------Drop down menu end------------------ */
+
+
+/* ---------------Filter ---------------- */
+.checkbox-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    
+}
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.overlay.open {
+    display: block;
+    opacity: 1;
+}
+
+.slide-panel {
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #f0f0f0;
+    box-shadow: -2px 0 5px rgba(gr, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.slide-panel.open{
+    right: 0;
+}
+.close-btn{
+    right: 10px;
+    position: absolute;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.checkbox-container{
+    margin-top: 80px;
+}
+.check-item{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.check-item input{
+    margin-right: 10px;
+}
+#FilterType{
+    color: gray;
+}
+#CloseFilter{
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 200px;
+}
+
+/* ---------------Filter end ---------------- */
+
+
+
+
+
+
+
+/* Pokemon */
+
+.Pokemon-Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    margin: 80px 55px 50px 50px;
+}
+
+.pokemon-img {
+    position: absolute;
+    left: 70px;
+    top: -50px;
+    width: 180px;
+    height: 134px;
+}
+
+.pokemon-card {
+    margin-top: 80px;
+    position: relative;
+    height: 260px;
+    width: 322px;
+    border-radius: 16px;
+
+}
+
+.pokemon-card h1 {
+    text-transform: capitalize;
+    margin: 100px 0 0 10px;
+    color: white;
+    font-size: 28px;
+
+}
+
+.pokemon-id {
+    display: inline-box;
+    color: aliceblue;
+    margin-left: 10px;
+}
+
+.pokemon-type,
+.pokemon-type2 {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    display: inline-flex;
+    padding: 8px 12px;
+    border-radius: 999px;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+
+
+/* @media only screen and (min-width:400px) {
+    body {
+        background: var(--Light---Gray, #2763da);
+        margin: 0 auto;
+    }
+    .Search{
+        max-width: 30%;
+    }
+    .Search-btn {
+        left: 55%;
+    }
+    .Filter{
+        display: flex;
+        justify-content: start;
+        margin-left: 4%;
+        gap: 100px;
+    }
+
+    .Pokemon-Container{
+        display: grid;
+        grid-template-columns: repeat(1, 322px);
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .Pokemon-Container{
+        display: grid;
+        grid-template-columns: repeat(3, 322px);
+    }
+    body {
+        background-color: green;
+        justify-content: center;
+        display: grid;
+    }
+    .Search{
+        max-width: 110%;
+    }
+    .Search-btn {
+        left: 69%;
+    }
+    .Filter{
+        display: flex;
+        justify-content: start;
+        margin-left: 4%;
+        gap: 750px;
+    }
+}
+
+@media only screen and (min-width:800px) {
+    body {
+        background-color: purple;
+        justify-content: center;
+    }
+    .Pokemon-Container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .Search{
+        max-width: 80%;
+    }
+    .Search-btn {
+        left: 69%;
+    }
+} */
+/* @media only screen and (min-width:1200px) {
+    body {
+        background: var(--Light---Gray, #F5F7FB);
+        justify-content: center;
+    }
+    .Pokemon-Container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .Filter{
+        display: flex;
+        justify-content: space-between;
+    }
+    .Search{
+        max-width: 112%;
+    }
+    .Search-btn {
+        left: 69%;
+    }
+}
+
+@media screen {} */

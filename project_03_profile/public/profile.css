@@ -1,0 +1,53 @@
+body {
+    background-color: #EFF3BF;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.profile {
+    background-color: white;
+    text-align: center;
+    width: 510px;
+    height: 755px;
+    border-radius: 64px;
+}
+.image {
+    margin-top: 20px;
+    height: 160px;
+    width: 160px;
+    border-radius: 160px;
+}
+.name {
+    margin-top: 100px;
+}
+.icon {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.para {
+    margin: 0 auto;
+    width: 414px;
+    margin-top: 50px;
+}
+.btn {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.btn-1 {
+    color: #838383;
+    width: 191px;
+    border: 1px solid #838383;
+    border-radius: 999px;
+    padding: 16px;
+}
+#white {
+    background-color: white;
+    color: #efefef;
+}
+#pink {
+    color: white;
+    background-color: #DF3F8C;
+}
