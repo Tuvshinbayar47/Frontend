@@ -1,0 +1,23 @@
+.villain-card {
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px;
+  width: 240px;
+  box-shadow: 0 0 12px red;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.villain-card:hover {
+  transform: scale(1.05);
+}
+
+.villain-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
